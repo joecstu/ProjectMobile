@@ -1,2 +1,12 @@
 
 \.idea/
+
+*.xml
+
+*.iml
+
+\.gradle/4\.6/fileHashes/
+
+*.bin
+
+*.lock
