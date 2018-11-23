@@ -12,3 +12,5 @@
 *.lock
 
 \.gradle/4\.6/taskHistory/
+
+app/build\.gradle
