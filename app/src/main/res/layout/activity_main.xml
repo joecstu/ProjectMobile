@@ -45,6 +45,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/btnSpeak"
             android:layout_margin="10dp"
-            android:text="แงงงงงงงงงงงง" />
+            android:text="แงงงงงงงงงงงฟฟฟฟฟฟฟง" />
     </LinearLayout>
 </RelativeLayout>
