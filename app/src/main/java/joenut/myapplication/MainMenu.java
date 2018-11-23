@@ -25,15 +25,15 @@ public class MainMenu extends AppCompatActivity {
 
             }
         });
-//        btn2.setOnClickListener(new View.OnClickListener() {
-//
-//            public void onClick(View v) {
-//                Intent intent=new  Intent(MainMenu.this,AndroidSelectImage.class);
-//                startActivity(intent);
-//
-//
-//            }
-//        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent=new  Intent(MainMenu.this,GalWalActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
     }
 
 
