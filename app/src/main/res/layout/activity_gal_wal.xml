@@ -5,12 +5,25 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/takePhoto"
+    <!--<Button-->
+        <!--android:id="@+id/takePhoto"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Take Photo"-->
+        <!--android:layout_marginBottom="25dp"/>-->
+
+
+    <ImageView
+        android:id="@+id/selectedImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/photoName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Take Photo"
-        android:layout_marginBottom="25dp"/>
+        android:ems="10"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/opengallery"
@@ -18,8 +31,4 @@
         android:layout_height="wrap_content"
         android:text="Choose from Gallery" />
 
-    <ImageView
-        android:id="@+id/selectedImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 </LinearLayout>

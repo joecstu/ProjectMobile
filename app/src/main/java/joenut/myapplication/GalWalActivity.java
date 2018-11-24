@@ -12,7 +12,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
@@ -27,14 +29,17 @@ public class GalWalActivity extends Activity {
     private Bitmap currentImage;
     private final int GALLERY = 1, CAMERA = 2;
     private String IMAGE_DIRECTORY = "image/*";
+    private EditText photoName;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gal_wal);
         selectedImage = (ImageView) findViewById(R.id.selectedImage);
+        photoName = (EditText) findViewById(R.id.photoName);
+        String name = photoName.getText().toString();
         Button openGallery = (Button) findViewById(R.id.opengallery);
-        Button takePhoto = (Button) findViewById(R.id.takePhoto);
+//        Button takePhoto = (Button) findViewById(R.id.takePhoto);
 
         openGallery.setOnClickListener(new View.OnClickListener() {
 
@@ -47,16 +52,16 @@ public class GalWalActivity extends Activity {
             }
         });
 
-        takePhoto.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent photoPickerIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                //photoPickerIntent.setType("image/*");
-                startActivityForResult(photoPickerIntent, CAMERA);
-            }
-
-        });
+//        takePhoto.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View v) {
+//                Intent photoPickerIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+//                //photoPickerIntent.setType("image/*");
+//                startActivityForResult(photoPickerIntent, CAMERA);
+//            }
+//
+//        });
 
 
     }
@@ -94,12 +99,13 @@ public class GalWalActivity extends Activity {
                 }
             }
 
-        } else if (requestCode == CAMERA) {
-            Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-            selectedImage.setImageBitmap(thumbnail);
-            saveImage(thumbnail);
-            Toast.makeText(GalWalActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
         }
+//        else if (requestCode == CAMERA) {
+//            Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+//            selectedImage.setImageBitmap(thumbnail);
+//            saveImage(thumbnail);
+//            Toast.makeText(GalWalActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+//        }
     }
 
 
